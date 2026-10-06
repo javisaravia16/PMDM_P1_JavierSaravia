@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Memoria PMDM P1 · NowFootball · Javier Saravia</title>
+<style>
+  @page { size: A4; margin: 22mm 20mm 20mm 20mm;
+    @bottom-center { content: counter(page); font: 9pt "Segoe UI", sans-serif; color: #5F6B5C; }
+    @top-right { content: "NowFootball · PMDM P1 · Javier Saravia"; font: 8pt "Segoe UI", sans-serif; color: #9aa59a; } }
+  @page :first { @bottom-center { content: none; } @top-right { content: none; } }
+  :root { --verde: #1B5E20; --verde-osc: #0D3B12; --amarillo: #FFC107; --rojo: #D32F2F; --gris: #5F6B5C; --linea: #DCE3D8; --fondo: #F3F6F1; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font: 10pt/1.5 "Segoe UI", Calibri, sans-serif; color: #1A1A1A; margin: 0; background: #fff; }
+  h1, h2, h3 { font-family: "Segoe UI Semibold", "Segoe UI", sans-serif; color: var(--verde-osc); break-after: avoid; }
+  h1 { font-size: 19pt; border-bottom: 3px solid var(--amarillo); padding-bottom: 4px; margin: 0 0 12px; break-before: page; }
+  h2 { font-size: 13.5pt; margin: 18px 0 6px; }
+  h3 { font-size: 11pt; margin: 12px 0 4px; color: var(--verde); }
+  p { margin: 0 0 8px; }
+  ul, ol { margin: 0 0 8px; padding-left: 20px; }
+  li { margin-bottom: 3px; }
+  code, pre { font-family: Consolas, "Cascadia Mono", monospace; font-size: 9pt; }
+  code { background: var(--fondo); padding: 0 3px; border-radius: 3px; }
+  pre { background: #10170F; color: #E8EDE6; padding: 10px 12px; border-radius: 6px; line-height: 1.4; white-space: pre-wrap; break-inside: avoid; margin: 0 0 8px; }
+  pre .c { color: #81C784; } pre .k { color: #FFCA28; }
+  table { width: 100%; border-collapse: collapse; margin: 4px 0 4px; font-size: 9.5pt; break-inside: avoid; }
+  th, td { border: 1px solid var(--linea); padding: 4px 7px; vertical-align: top; text-align: left; }
+  th { background: var(--verde); color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #F8FAF7; }
+  .caption { font-size: 9pt; color: var(--gris); font-style: italic; margin: 2px 0 12px; text-align: center; }
+  figure { margin: 8px 0 4px; text-align: center; break-inside: avoid; }
+  figure img { max-width: 100%; }
+  .fila { display: flex; gap: 14px; justify-content: center; align-items: flex-start; break-inside: avoid; }
+  .fila figure { flex: 1; margin: 0; }
+  .shot { max-height: 330px; border: 1px solid var(--linea); border-radius: 8px; }
+  .pendiente { border: 2px dashed var(--rojo); border-radius: 8px; color: var(--rojo); padding: 28px 10px; font-size: 9.5pt; background: #FFF6F6; }
+  .prio-alta { color: var(--rojo); font-weight: 600; } .prio-media { color: #B7791F; font-weight: 600; } .prio-baja { color: var(--gris); font-weight: 600; }
+  .sw { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: middle; border: 1px solid #0002; margin-right: 6px; }
+  .nota { background: var(--fondo); border-left: 4px solid var(--verde); padding: 6px 10px; margin: 6px 0 10px; font-size: 9.5pt; }
+  /* Portada */
+  .portada { height: 250mm; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+  .portada .banda { background: var(--verde); color: #fff; border-radius: 14px; padding: 34px 20px 28px; }
+  .portada .banda h0 { display: block; font-size: 38pt; font-weight: 700; letter-spacing: 1px; }
+  .portada .banda .lema { color: var(--amarillo); font-size: 13pt; letter-spacing: 3px; text-transform: uppercase; }
+  .portada .icono { width: 120px; margin: 26px auto 0; }
+  .portada .estadio { width: 100%; border-radius: 12px; margin-top: 18px; }
+  .portada .datos { font-size: 12pt; line-height: 1.8; }
+  .portada .datos b { color: var(--verde-osc); }
+  /* Índices */
+  .indice { list-style: none; padding: 0; margin: 0 0 14px; }
+  .indice li { display: flex; align-items: baseline; margin: 0 0 3px; }
+  .indice li a { color: inherit; text-decoration: none; }
+  .indice li .relleno { flex: 1; border-bottom: 1px dotted #aab3a8; margin: 0 6px; transform: translateY(-3px); }
+  .indice li.n1 { font-weight: 600; margin-top: 6px; }
+  .indice li.n2 { padding-left: 18px; }
+  h1.sin-salto { break-before: avoid; }
+  .sub-indice { font-size: 12pt; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<!-- ============================ PORTADA ============================ -->
+<section class="portada">
+  <div>
+    <div class="banda">
+      <h0>NowFootball</h0>
+      <div class="lema">Resultados al minuto</div>
+      <img class="icono" src="../../app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="Icono de NowFootball">
+    </div>
+    <img class="estadio" src="../../app/src/main/res/drawable-nodpi/img_estadio.jpg" alt="Estadio">
+  </div>
+  <div class="datos">
+    <div style="font-size:16pt"><b>Práctica 1 · Programación Multimedia y Dispositivos Móviles</b></div>
+    <div>Análisis, entorno y recursos de una app Android</div>
+    <div style="margin-top:14px"><b>Autor:</b> Javier Saravia</div>
+    <div><b>Centro:</b> MEDAC · CFGS Desarrollo de Aplicaciones Multiplataforma</div>
+    <div><b>Curso:</b> 2026/2027 · Octubre de 2026</div>
+    <div><b>Repositorio:</b> https://github.com/javisaravia16/PMDM_P1_JavierSaravia</div>
+  </div>
+</section>
+
+<!-- ============================ ÍNDICES ============================ -->
+<h1 id="indice">Índice</h1>
+<ul class="indice" id="indice-general"></ul>
+<h2 class="sub-indice">Índice de ilustraciones</h2>
+<ul class="indice" id="indice-ilustraciones"></ul>
+<h2 class="sub-indice">Índice de tablas</h2>
+<ul class="indice" id="indice-tablas"></ul>
+
+<!-- ============================ 1. INTRODUCCIÓN ============================ -->
+<h1 id="s1">1. Introducción</h1>
+<p>Esta memoria documenta la primera práctica del módulo de PMDM. El objetivo no es programar funcionalidad, sino analizar el desarrollo móvil, preparar bien el entorno de trabajo y organizar todos los recursos de una app Android sencilla como se haría en un proyecto real.</p>
+<p>La app elegida es <b>NowFootball</b>, una aplicación de <b>resultados de fútbol</b>. He elegido este tema porque es una app que yo mismo usaría: cuando hay jornada quiero saber cómo van los partidos sin tener que abrir una web llena de anuncios. Además, el tema da mucho juego con los recursos: colores muy reconocibles (el verde del césped, el amarillo del marcador o el rojo de «en directo»), textos con parámetros (minuto, marcador), listas de competiciones e imágenes.</p>
+<p>El proyecto está hecho en <b>Java con vistas XML</b> a partir de la plantilla <i>Empty Views Activity</i>, con <b>API mínima 24</b> (Android 7.0). Tiene dos pantallas (lista de partidos y detalle de un partido), está traducido al inglés y, como ampliación, incluye tema oscuro y un diseño específico para horizontal.</p>
+<p>La memoria sigue el orden del enunciado: <b>Parte A</b> (análisis del desarrollo móvil), <b>Parte B</b> (especificación de la app), <b>Parte C</b> (entorno de desarrollo) y <b>Parte D</b> (recursos), y termina con una conclusión personal.</p>
+
+<!-- ============================ 2. PARTE A ============================ -->
+<h1 id="s2">2. Parte A · Análisis del desarrollo móvil</h1>
+
+<h2 id="s2-1">2.1. Ventajas e inconvenientes frente a escritorio y web</h2>
+<p><b>Ventajas.</b> El móvil va siempre con el usuario: una app puede avisarle en el momento justo (por ejemplo, de un gol de su equipo) con notificaciones push, accede directamente al hardware (GPS, sensores, vibración), se abre con un toque y puede funcionar sin conexión con datos guardados. Google Play se encarga de instalarla y actualizarla.</p>
+<p><b>Inconvenientes.</b> Hay que pasar por las revisiones de la tienda, mantener un proyecto por plataforma si se quiere nativo en Android e iOS y, sobre todo, tener en cuenta limitaciones que en escritorio o web casi no existen:</p>
+<table>
+  <tr><th style="width:36%">Limitación</th><th>Cómo afecta a NowFootball</th></tr>
+  <tr><td><b>Batería</b>: la red, la pantalla y la CPU gastan una batería limitada.</td><td>No puedo pedir resultados cada pocos segundos. Solo actualizaré cuando haya partidos en directo, en intervalos razonables o mediante push, y pararé las actualizaciones en <code>onPause()</code>.</td></tr>
+  <tr><td><b>Conectividad</b>: la conexión es inestable (wifi, 4G, sin cobertura) y los datos son limitados.</td><td>En un estadio lleno la red va fatal. La app debe mostrar el último resultado guardado con «Actualizado hace X min» en vez de quedarse en blanco.</td></tr>
+  <tr><td><b>Pantalla</b>: es pequeña y se usa con el dedo.</td><td>Cada partido es una tarjeta con lo esencial (equipos, marcador y estado), los botones miden al menos 48 dp y hay un diseño propio para horizontal.</td></tr>
+  <tr><td><b>Memoria</b>: hay poca RAM y Android cierra procesos en segundo plano.</td><td>Imágenes ligeras (vectores) y un estado que se pueda recuperar si el sistema cierra la app.</td></tr>
+  <tr><td><b>Fragmentación</b>: miles de modelos, versiones y densidades.</td><td>Uso <code>dp</code>/<code>sp</code>, recursos por densidad (<code>mipmap-*</code>), icono adaptativo y API 24 para cubrir la mayoría de dispositivos.</td></tr>
+</table>
+<p class="caption" data-tabla="Limitaciones del desarrollo móvil y su impacto en NowFootball">Tabla 1. Limitaciones del desarrollo móvil y su impacto en NowFootball</p>
+
+<h2 id="s2-2">2.2. Elección tecnológica</h2>
+<table>
+  <tr><th style="width:15%"></th><th>Nativo</th><th>Híbrido</th><th>Multiplataforma</th></tr>
+  <tr><td><b>Lenguajes</b></td><td>Java / Kotlin (Android), Swift (iOS)</td><td>HTML, CSS y JS en un <i>WebView</i></td><td>Dart, JS/TS o C#, un único código</td></tr>
+  <tr><td><b>Rendimiento</b></td><td>Máximo: usa los componentes del sistema</td><td>El más bajo: es una web embebida</td><td>Cercano al nativo</td></tr>
+  <tr><td><b>Hardware</b></td><td>Acceso total e inmediato a las APIs nuevas</td><td>Mediante <i>plugins</i>, a veces con retraso</td><td>Amplio, mediante <i>plugins</i></td></tr>
+  <tr><td><b>Coste</b></td><td>Alto para dos plataformas (dos códigos)</td><td>Bajo: se reutilizan conocimientos web</td><td>Medio: un código, pero con capas extra</td></tr>
+  <tr><td><b>Ejemplo</b></td><td>Android SDK + Jetpack</td><td>Ionic + Capacitor, Apache Cordova</td><td>Flutter, React Native</td></tr>
+</table>
+<p class="caption" data-tabla="Comparativa nativo, híbrido y multiplataforma">Tabla 2. Comparativa nativo, híbrido y multiplataforma</p>
+<p><b>¿Por qué nativo Android?</b> En una app de resultados en directo lo que más importa es la fluidez, el consumo de batería y que las notificaciones sean fiables, y ahí lo nativo es lo mejor. Además, el sistema de recursos de Android (<code>values-en</code>, <code>values-night</code>, <code>layout-land</code>, <code>mipmap-*</code>) resuelve de serie la traducción, el tema oscuro y las distintas pantallas, y Android es la plataforma mayoritaria en España. Por último, es la tecnología del módulo: Java y XML en Android Studio.</p>
+
+<h2 id="s2-3">2.3. Ciclo de vida de una Activity</h2>
+<figure>
+<svg width="500" height="297" viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="12">
+  <defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0D3B12"/></marker></defs>
+  <g stroke="#0D3B12" stroke-width="1.5" fill="none" marker-end="url(#fl)">
+    <line x1="250" y1="34" x2="250" y2="52"/>
+    <line x1="250" y1="78" x2="250" y2="96"/>
+    <line x1="250" y1="122" x2="250" y2="140"/>
+    <line x1="250" y1="166" x2="250" y2="184"/>
+    <line x1="250" y1="212" x2="250" y2="244"/>
+    <line x1="250" y1="270" x2="250" y2="294"/>
+    <line x1="250" y1="320" x2="250" y2="344"/>
+    <path d="M316,257 H380 V153 H316"/>
+    <path d="M316,307 H475 V122"/>
+    <path d="M420,109 H316"/>
+    <path d="M184,307 H90 V65 H184" stroke-dasharray="5 3"/>
+  </g>
+  <rect x="170" y="6" width="160" height="28" rx="14" fill="#1B5E20"/><text x="250" y="25" fill="#fff" text-anchor="middle" font-weight="600">Activity lanzada</text>
+  <g fill="#FFFFFF" stroke="#1B5E20" stroke-width="1.5">
+    <rect x="184" y="52" width="132" height="26" rx="6"/><rect x="184" y="96" width="132" height="26" rx="6"/>
+    <rect x="184" y="140" width="132" height="26" rx="6"/><rect x="184" y="244" width="132" height="26" rx="6"/>
+    <rect x="184" y="294" width="132" height="26" rx="6"/><rect x="184" y="344" width="132" height="26" rx="6"/>
+    <rect x="420" y="96" width="110" height="26" rx="6"/>
+  </g>
+  <rect x="165" y="184" width="170" height="28" rx="14" fill="#FFC107"/><text x="250" y="203" text-anchor="middle" font-weight="700">Activity en ejecución</text>
+  <g text-anchor="middle" font-family="Consolas, monospace" font-size="12.5">
+    <text x="250" y="70">onCreate()</text><text x="250" y="114">onStart()</text><text x="250" y="158">onResume()</text>
+    <text x="250" y="262">onPause()</text><text x="250" y="312">onStop()</text><text x="250" y="362">onDestroy()</text>
+    <text x="475" y="114">onRestart()</text>
+  </g>
+  <g font-size="10.5" fill="#5F6B5C">
+    <text x="258" y="226">otra Activity pasa</text><text x="258" y="238">a primer plano</text>
+    <text x="258" y="285">ya no es visible</text>
+    <text x="258" y="335">finish() / Atrás</text>
+    <text x="386" y="200">vuelve</text><text x="386" y="212">(visible)</text>
+    <text x="481" y="200">vuelve a</text><text x="481" y="212">la Activity</text>
+    <text x="80" y="186" transform="rotate(-90 80 186)" text-anchor="middle">proceso eliminado por falta de memoria</text>
+  </g>
+  <rect x="500" y="290" width="135" height="66" rx="6" fill="#F3F6F1" stroke="#DCE3D8"/>
+  <g font-size="10.5"><rect x="510" y="300" width="10" height="10" fill="#1B5E20"/><text x="526" y="309">evento</text>
+  <rect x="510" y="318" width="10" height="10" fill="#fff" stroke="#1B5E20"/><text x="526" y="327">método callback</text>
+  <rect x="510" y="336" width="10" height="10" fill="#FFC107"/><text x="526" y="345">estado estable</text></g>
+</svg>
+</figure>
+<p class="caption" data-ilus="Diagrama del ciclo de vida de una Activity">Ilustración 1. Diagrama del ciclo de vida de una Activity</p>
+<ul>
+  <li><b>Recibe una llamada.</b> La pantalla de llamada tapa NowFootball: <code>onPause()</code> → <code>onStop()</code>. La Activity <u>no se destruye</u> y conserva su estado. Ahí pararía la actualización de marcadores para no gastar batería ni datos. Al colgar: <code>onRestart()</code> → <code>onStart()</code> → <code>onResume()</code>, y conviene refrescar los resultados porque el partido ha seguido.</li>
+  <li><b>Gira el móvil.</b> Es un cambio de configuración, así que Android destruye y recrea la Activity: <code>onPause()</code> → <code>onStop()</code> → <code>onDestroy()</code> → <code>onCreate()</code> → <code>onStart()</code> → <code>onResume()</code>. En <code>onCreate()</code> se carga ahora <code>layout-land/activity_main.xml</code> (dos columnas). Las vistas con <code>id</code>, como el <code>Spinner</code> de competición, recuperan su estado solas.</li>
+  <li><b>Pulsa Atrás.</b> En el detalle, <code>DetalleActivity</code> termina (<code>onPause()</code> → <code>onStop()</code> → <code>onDestroy()</code>) y <code>MainActivity</code> vuelve con <code>onRestart()</code> → <code>onStart()</code> → <code>onResume()</code>. En la pantalla principal, desde Android 12 la Activity raíz <u>no se destruye</u>: la app solo pasa a segundo plano (<code>onPause()</code> → <code>onStop()</code>). En versiones anteriores sí se llamaba a <code>onDestroy()</code>.</li>
+</ul>
+
+<!-- ============================ 3. PARTE B ============================ -->
+<h1 id="s3">3. Parte B · Especificación de la app</h1>
+
+<h2 id="s3-1">3.1. Idea y público objetivo</h2>
+<p><b>NowFootball</b> es una app para consultar de un vistazo los resultados de fútbol del día: qué partidos se juegan, cuáles están en directo y en qué minuto van, cuáles han terminado y a qué hora empiezan los siguientes. Desde cada partido se accede a un detalle con el marcador, el estadio y los momentos clave (goles, tarjetas, descanso). Se pueden filtrar los partidos por competición y «seguir» un partido para recibir avisos.</p>
+<p>Está pensada para <b>aficionados de 16 a 50 años</b> que siguen la liga y las competiciones europeas y quieren saber los resultados rápido, por ejemplo en el trabajo, en el transporte o en el propio estadio. No buscan noticias ni estadísticas avanzadas: buscan <b>rapidez y claridad</b>. Como el uso es muy de «abrir, mirar y cerrar», la interfaz prioriza el marcador por encima de todo lo demás.</p>
+
+<h2 id="s3-2">3.2. Objetivos medibles</h2>
+<ol>
+  <li><b>O1 · Rapidez:</b> que el usuario pueda ver el resultado de cualquier partido del día en <b>menos de 5 segundos</b> desde que toca el icono.</li>
+  <li><b>O2 · Sencillez:</b> llegar al detalle de cualquier partido con <b>un máximo de 2 toques</b> desde la pantalla principal.</li>
+  <li><b>O3 · Alcance:</b> que la app esté disponible en <b>2 idiomas</b> (español e inglés) y funcione en <b>al menos el 95 %</b> de los dispositivos Android activos (API mínima 24).</li>
+</ol>
+
+<h2 id="s3-3">3.3. Requisitos funcionales</h2>
+<table>
+  <tr><th style="width:10%">Código</th><th>Descripción</th><th style="width:11%">Prioridad</th></tr>
+  <tr><td>RF-01</td><td>La app mostrará la lista de partidos del día con equipo local, equipo visitante, marcador y estado (en directo con minuto, finalizado o próximo con hora).</td><td class="prio-alta">Alta</td></tr>
+  <tr><td>RF-02</td><td>El usuario podrá filtrar los partidos por competición mediante un selector.</td><td class="prio-alta">Alta</td></tr>
+  <tr><td>RF-03</td><td>Al pulsar un partido o «Ver detalle», se mostrará el marcador, el estadio y la lista de momentos clave del partido.</td><td class="prio-alta">Alta</td></tr>
+  <tr><td>RF-04</td><td>El usuario podrá marcar un partido como «seguido».</td><td class="prio-media">Media</td></tr>
+  <tr><td>RF-05</td><td>La app enviará una notificación cuando haya un gol en un partido seguido.</td><td class="prio-media">Media</td></tr>
+  <tr><td>RF-06</td><td>La interfaz se mostrará en el idioma del dispositivo (español o inglés; por defecto, español).</td><td class="prio-media">Media</td></tr>
+  <tr><td>RF-07</td><td>La pantalla principal indicará cuánto tiempo ha pasado desde la última actualización de los datos.</td><td class="prio-baja">Baja</td></tr>
+</table>
+<p class="caption" data-tabla="Requisitos funcionales">Tabla 3. Requisitos funcionales</p>
+
+<h2 id="s3-4">3.4. Requisitos no funcionales</h2>
+<table>
+  <tr><th style="width:10%">Código</th><th style="width:16%">Tipo</th><th>Descripción verificable</th></tr>
+  <tr><td>RNF-01</td><td>Usabilidad</td><td>Todo elemento pulsable mide al menos <b>48 × 48 dp</b>, y se llega al detalle de un partido en <b>≤ 2 toques</b> desde la pantalla principal.</td></tr>
+  <tr><td>RNF-02</td><td>Compatibilidad</td><td>La app se instala y funciona desde <b>Android 7.0 (API 24)</b> hasta <b>Android 16 (API 36)</b>. Elijo API 24 porque, según el asistente de Android Studio, cubre aproximadamente el <b>97 %</b> de los dispositivos activos y además permite usar lambdas de Java 8 y las librerías actuales de AndroidX y Material sin restricciones. Se comprueba ejecutando la app en emuladores de distintas versiones.</td></tr>
+  <tr><td>RNF-03</td><td>Rendimiento</td><td>La pantalla principal se muestra en <b>menos de 2 s</b> en arranque en frío en el emulador Pixel 7. Se mide con la línea <code>Displayed</code> de Logcat.</td></tr>
+  <tr><td>RNF-04</td><td>Tamaño</td><td>El APK de depuración ocupa <b>menos de 10 MB</b> (ahora mismo, 6,3 MB).</td></tr>
+  <tr><td>RNF-05</td><td>Accesibilidad</td><td>Todas las imágenes tienen <code>contentDescription</code>, los textos usan <code>sp</code> y el contraste texto/fondo es <b>≥ 4,5:1</b> (WCAG AA).</td></tr>
+  <tr><td>RNF-06</td><td>Mantenibilidad / i18n</td><td>Hay <b>0 textos escritos a mano</b> en los layouts: Lint no muestra ningún aviso <i>HardcodedText</i>.</td></tr>
+</table>
+<p class="caption" data-tabla="Requisitos no funcionales">Tabla 4. Requisitos no funcionales</p>
+
+<h2 id="s3-5">3.5. Casos de uso</h2>
+<figure>
+<svg width="600" height="340" viewBox="0 0 640 362" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="12">
+  <defs><marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#5F6B5C" stroke-width="1.5"/></marker></defs>
+  <rect x="150" y="8" width="340" height="346" rx="10" fill="#F3F6F1" stroke="#1B5E20" stroke-width="1.5"/>
+  <text x="320" y="28" text-anchor="middle" font-weight="700" fill="#0D3B12">Sistema NowFootball</text>
+  <g stroke="#1A1A1A" stroke-width="1.6" fill="none">
+    <circle cx="60" cy="140" r="12"/><line x1="60" y1="152" x2="60" y2="190"/><line x1="38" y1="166" x2="82" y2="166"/><line x1="60" y1="190" x2="42" y2="220"/><line x1="60" y1="190" x2="78" y2="220"/>
+    <circle cx="580" cy="150" r="12"/><line x1="580" y1="162" x2="580" y2="200"/><line x1="558" y1="176" x2="602" y2="176"/><line x1="580" y1="200" x2="562" y2="230"/><line x1="580" y1="200" x2="598" y2="230"/>
+  </g>
+  <text x="60" y="240" text-anchor="middle" font-weight="600">Aficionado</text>
+  <text x="580" y="250" text-anchor="middle" font-weight="600">Servicio de</text><text x="580" y="264" text-anchor="middle" font-weight="600">resultados</text>
+  <g stroke="#1A1A1A" stroke-width="1.2">
+    <line x1="84" y1="160" x2="206" y2="62"/><line x1="84" y1="164" x2="202" y2="122"/><line x1="84" y1="168" x2="202" y2="182"/><line x1="84" y1="172" x2="202" y2="242"/><line x1="82" y1="178" x2="206" y2="302"/>
+    <line x1="556" y1="170" x2="434" y2="62"/><line x1="556" y1="176" x2="438" y2="182"/><line x1="556" y1="182" x2="434" y2="302"/>
+  </g>
+  <g fill="#fff" stroke="#1B5E20" stroke-width="1.5">
+    <ellipse cx="320" cy="62" rx="118" ry="20"/><ellipse cx="320" cy="122" rx="118" ry="20"/><ellipse cx="320" cy="182" rx="118" ry="20"/>
+    <ellipse cx="320" cy="242" rx="118" ry="20"/><ellipse cx="320" cy="302" rx="118" ry="20"/>
+  </g>
+  <g text-anchor="middle"><text x="320" y="66">CU-01 Consultar partidos del día</text><text x="320" y="126">CU-02 Filtrar por competición</text>
+  <text x="320" y="186">CU-03 Ver detalle del partido</text><text x="320" y="246">CU-04 Seguir un partido</text><text x="320" y="306">CU-05 Recibir aviso de gol</text></g>
+  <g stroke="#5F6B5C" stroke-width="1.3" stroke-dasharray="5 3" fill="none" marker-end="url(#fa)">
+    <line x1="320" y1="102" x2="320" y2="83"/><line x1="320" y1="222" x2="320" y2="203"/><line x1="320" y1="282" x2="320" y2="263"/>
+  </g>
+  <g font-size="10" fill="#5F6B5C"><text x="328" y="96">«extend»</text><text x="328" y="216">«extend»</text><text x="328" y="276">«include»</text></g>
+</svg>
+</figure>
+<p class="caption" data-ilus="Diagrama de casos de uso de NowFootball">Ilustración 2. Diagrama de casos de uso de NowFootball</p>
+<p>El actor principal es el <b>Aficionado</b>. El actor secundario es el <b>Servicio de resultados</b>, un sistema externo (una API de datos deportivos) que proporciona marcadores y eventos. «Filtrar por competición» <i>extiende</i> la consulta de partidos, «Seguir un partido» <i>extiende</i> el detalle y «Recibir aviso de gol» <i>incluye</i> el seguimiento, porque solo se avisa de los partidos seguidos.</p>
+
+<table>
+  <tr><th colspan="2">CU-01 · Consultar partidos del día</th></tr>
+  <tr><td style="width:22%"><b>Actor</b></td><td>Aficionado (principal); Servicio de resultados (secundario)</td></tr>
+  <tr><td><b>Precondición</b></td><td>La app está instalada y el usuario la abre desde el lanzador.</td></tr>
+  <tr><td><b>Flujo principal</b></td><td>1. El usuario toca el icono de NowFootball.<br>2. El sistema muestra la cabecera y el saludo con el número de partidos de hoy.<br>3. El sistema pide los resultados al Servicio de resultados.<br>4. El sistema muestra una tarjeta por partido con equipos, marcador y estado (en directo con minuto, final o próximo con hora).<br>5. El sistema indica «Actualizado hace X min».</td></tr>
+  <tr><td><b>Flujo alternativo</b></td><td>3a. No hay conexión: el sistema muestra los últimos resultados guardados y la hora de la última actualización.<br>4a. No hay partidos hoy: el sistema muestra un mensaje y la fecha de la próxima jornada.</td></tr>
+  <tr><td><b>Postcondición</b></td><td>El usuario ve el estado actual de los partidos del día y puede filtrarlos o abrir su detalle.</td></tr>
+</table>
+<p class="caption" data-tabla="Ficha del caso de uso CU-01">Tabla 5. Ficha del caso de uso CU-01</p>
+
+<table>
+  <tr><th colspan="2">CU-03 · Ver detalle del partido</th></tr>
+  <tr><td style="width:22%"><b>Actor</b></td><td>Aficionado</td></tr>
+  <tr><td><b>Precondición</b></td><td>El usuario está en la pantalla «Partidos de hoy» y hay al menos un partido en la lista.</td></tr>
+  <tr><td><b>Flujo principal</b></td><td>1. El usuario pulsa la tarjeta de un partido o el botón «Ver detalle».<br>2. El sistema abre la pantalla «Detalle del partido».<br>3. El sistema muestra el estado, el marcador en grande, los equipos y el estadio.<br>4. El sistema lista los momentos clave (goles, tarjetas, descanso) por orden de minuto.<br>5. El usuario pulsa «Volver a partidos» o el botón Atrás y vuelve a la lista.</td></tr>
+  <tr><td><b>Flujo alternativo</b></td><td>3a. El partido aún no ha empezado: en lugar del marcador se muestra «- : -» y la hora de inicio.<br>4a. Todavía no hay eventos: se muestra la lista vacía.<br>5a. El usuario pulsa «Seguir partido» (CU-04) antes de volver.</td></tr>
+  <tr><td><b>Postcondición</b></td><td>El usuario conoce el detalle del partido. Si lo ha seguido, el partido queda marcado como seguido.</td></tr>
+</table>
+<p class="caption" data-tabla="Ficha del caso de uso CU-03">Tabla 6. Ficha del caso de uso CU-03</p>
+
+<!-- ============================ 4. PARTE C ============================ -->
+<h1 id="s4">4. Parte C · Entorno de desarrollo</h1>
+
+<h2 id="s4-1">4.1. Creación del proyecto</h2>
+<p>Creé el proyecto en Android Studio con <i>New Project → Empty Views Activity</i> y esta configuración:</p>
+<table>
+  <tr><th style="width:30%">Opción</th><th>Valor</th></tr>
+  <tr><td>Nombre</td><td><code>PMDM_P1_JavierSaravia</code> (el nombre visible de la app es «NowFootball»)</td></tr>
+  <tr><td>Paquete (<i>namespace</i> / <i>applicationId</i>)</td><td><code>es.medac.javier.app</code></td></tr>
+  <tr><td>Lenguaje</td><td>Java (vistas en XML)</td></tr>
+  <tr><td>API mínima / objetivo</td><td><code>minSdk 24</code> (Android 7.0) / <code>targetSdk 36</code></td></tr>
+  <tr><td>Sistema de compilación</td><td>Gradle 9.5.0 con Kotlin DSL (<code>.kts</code>), Android Gradle Plugin 9.3.3 y catálogo de versiones</td></tr>
+  <tr><td>Control de versiones</td><td>Git con el <code>.gitignore</code> de Android Studio (excluye <code>build/</code>, <code>.gradle/</code> y <code>local.properties</code>)</td></tr>
+</table>
+<p class="caption" data-tabla="Configuración del proyecto">Tabla 7. Configuración del proyecto</p>
+<figure class="cap" data-src="../capturas/01_nuevo_proyecto.png" data-txt="Asistente New Project con nombre, paquete, Java y API 24"></figure>
+<p class="caption" data-ilus="Asistente de creación del proyecto en Android Studio">Ilustración 3. Asistente de creación del proyecto en Android Studio</p>
+
+<h2 id="s4-2">4.2. Dispositivos virtuales (AVD)</h2>
+<p>Configuré dos dispositivos virtuales en el <i>Device Manager</i> con tamaño y densidad distintos, para comprobar que los recursos en <code>dp</code>/<code>sp</code> y las carpetas <code>mipmap-*</code> se adaptan bien:</p>
+<table>
+  <tr><th>AVD</th><th>Tipo</th><th>Resolución</th><th>Densidad</th><th>Versión / API</th></tr>
+  <tr><td>Pixel 7</td><td>Móvil 6,3"</td><td>1080 × 2400 px</td><td>420 dpi (<i>xxhdpi</i>)</td><td>Android 16 · API 36</td></tr>
+  <tr><td>Pixel Tablet</td><td>Tablet 10,95"</td><td>2560 × 1600 px</td><td>320 dpi (<i>xhdpi</i>)</td><td>Android 15 · API 35</td></tr>
+</table>
+<p class="caption" data-tabla="Dispositivos virtuales configurados">Tabla 8. Dispositivos virtuales configurados</p>
+<figure class="cap" data-src="../capturas/02_device_manager.png" data-txt="Device Manager con los dos AVD"></figure>
+<p class="caption" data-ilus="Device Manager con los dos AVD configurados">Ilustración 4. Device Manager con los dos AVD configurados</p>
+
+<h2 id="s4-3">4.3. Ejecución en ambos dispositivos</h2>
+<div class="fila">
+  <figure class="cap" data-src="../capturas/03_movil_es.png" data-txt="App en el Pixel 7"></figure>
+  <figure class="cap" data-src="../capturas/04_tablet_es.png" data-txt="App en la Pixel Tablet"></figure>
+</div>
+<p class="caption" data-ilus="NowFootball ejecutándose en el móvil y en la tablet">Ilustración 5. NowFootball ejecutándose en el móvil (izquierda) y en la tablet (derecha)</p>
+<p>En la tablet, el mismo layout aprovecha el ancho porque las tarjetas usan <code>match_parent</code> y <code>layout_weight</code>, y los textos mantienen un tamaño legible gracias a <code>sp</code>.</p>
+
+<h2 id="s4-4">4.4. Estructura del proyecto</h2>
+<pre>PMDM_P1_JavierSaravia/
+├── <span class="k">settings.gradle.kts</span>        <span class="c">← nombre del proyecto, módulos y repositorios</span>
+├── <span class="k">build.gradle.kts</span>           <span class="c">← configuración común (plugins)</span>
+├── gradle/libs.versions.toml  <span class="c">← catálogo de versiones de dependencias</span>
+├── gradle/wrapper/            <span class="c">← Gradle Wrapper (versión fija de Gradle)</span>
+└── app/
+    ├── <span class="k">build.gradle.kts</span>       <span class="c">← namespace, applicationId, minSdk, targetSdk, dependencias</span>
+    └── src/main/
+        ├── <span class="k">AndroidManifest.xml</span>
+        ├── java/es/medac/javier/app/
+        │   ├── MainActivity.java
+        │   └── DetalleActivity.java
+        └── res/
+            ├── layout/ · layout-land/      <span class="c">← interfaces en XML</span>
+            ├── values/ · values-en/ · values-night/
+            ├── drawable/ · drawable-nodpi/ <span class="c">← vector y bitmap</span>
+            └── mipmap-*/                   <span class="c">← icono por densidad</span></pre>
+<p class="caption" data-ilus="Estructura de carpetas del proyecto">Ilustración 6. Estructura de carpetas del proyecto</p>
+<ul>
+  <li><b><code>AndroidManifest.xml</code></b> es la «ficha» de la app para el sistema: declara el paquete, el icono (<code>android:icon</code> y <code>android:roundIcon</code>), el nombre (<code>@string/app_name</code>), el tema (<code>@style/Theme.NowFootball</code>) y las Activities. <code>MainActivity</code> tiene el <i>intent-filter</i> <code>MAIN</code>/<code>LAUNCHER</code>, que es lo que la hace aparecer en el lanzador. <code>DetalleActivity</code> no es exportada y declara a <code>MainActivity</code> como padre.</li>
+  <li><b><code>java/</code></b> contiene el código fuente organizado por paquete. Aquí están las dos Activities, que solo cargan su layout y rellenan los textos con parámetros.</li>
+  <li><b><code>res/</code></b> contiene todos los recursos que no son código. Android elige automáticamente la carpeta adecuada según el <b>calificador</b>: idioma (<code>-en</code>), modo oscuro (<code>-night</code>), orientación (<code>-land</code>), densidad (<code>-xxhdpi</code>) o versión (<code>-v26</code>).</li>
+  <li><b>Ficheros Gradle:</b> Gradle compila el proyecto y genera el APK. <code>settings.gradle.kts</code> define el proyecto y sus módulos; el <code>build.gradle.kts</code> de la raíz declara los plugins; el de <code>app/</code> configura la app (SDK mínimo y objetivo, versión, compilación Java 11 y dependencias como AppCompat o Material). <code>libs.versions.toml</code> centraliza las versiones y el <i>wrapper</i> garantiza que todo el mundo compila con la misma versión de Gradle.</li>
+</ul>
+
+<h2 id="s4-5">4.5. Relación entre la Activity y su layout</h2>
+<p>La Activity (Java) tiene el comportamiento y el layout (XML) tiene la interfaz. Al compilar, Gradle genera la clase <b><code>R</code></b>, con un identificador numérico para cada recurso. En <code>onCreate()</code>, <code>setContentView(R.layout.activity_main)</code> «infla» el XML y crea los objetos <code>View</code>. Después, con <code>findViewById(R.id.…)</code>, obtengo cada vista para modificarla desde Java:</p>
+<pre><span class="k">public class</span> MainActivity <span class="k">extends</span> AppCompatActivity {
+    <span class="k">@Override</span>
+    <span class="k">protected void</span> onCreate(Bundle savedInstanceState) {
+        <span class="k">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);              <span class="c">// res/layout/activity_main.xml (o layout-land)</span>
+        TextView tvSaludo = findViewById(R.id.tvSaludo);     <span class="c">// android:id="@+id/tvSaludo"</span>
+        tvSaludo.setText(getString(R.string.saludo,          <span class="c">// "¡Hola, %1$s!"</span>
+                getString(R.string.usuario_invitado)));
+    }
+}</pre>
+<p>Así, el mismo código Java funciona con <code>layout/</code> y con <code>layout-land/</code>, y en español o inglés, porque solo usa identificadores: el sistema decide qué recurso concreto carga.</p>
+
+<!-- ============================ 5. PARTE D ============================ -->
+<h1 id="s5">5. Parte D · Recursos de la aplicación</h1>
+<p>La app tiene dos pantallas: <b>Partidos de hoy</b> (<code>activity_main.xml</code>) y <b>Detalle del partido</b> (<code>activity_detalle.xml</code>). Las partes comunes están en layouts reutilizables mediante <code>&lt;include&gt;</code>: <code>cabecera.xml</code>, <code>bloque_bienvenida.xml</code> y <code>lista_partidos.xml</code>. <b>En los layouts no hay ningún texto, color ni tamaño escrito a mano</b>: todo viene de <code>res/values</code>. Los únicos números literales son los <code>0dp</code> que exige <code>layout_weight</code>, y no son una medida real.</p>
+<div class="fila">
+  <figure class="cap" data-src="../capturas/03_movil_es.png" data-txt="Pantalla Partidos de hoy"></figure>
+  <figure class="cap" data-src="../capturas/06_detalle_es.png" data-txt="Pantalla Detalle del partido"></figure>
+</div>
+<p class="caption" data-ilus="Las dos pantallas de NowFootball">Ilustración 7. Las dos pantallas de NowFootball: partidos de hoy y detalle</p>
+
+<h2 id="s5-1">5.1. Textos (<code>strings.xml</code>)</h2>
+<p><code>values/strings.xml</code> tiene <b>28 cadenas</b>, <b>2 <code>string-array</code></b> y <b>1 <code>plurals</code></b>, agrupados por pantalla y con comentarios:</p>
+<ul>
+  <li><b>string-array:</b> <code>competiciones</code> alimenta el <code>Spinner</code> directamente desde el XML (<code>android:entries="@array/competiciones"</code>) y <code>eventos_partido</code> alimenta el <code>ListView</code> del detalle.</li>
+  <li><b>Textos con parámetros:</b> <code>saludo</code> («¡Hola, %1$s!»), <code>estado_en_directo</code> («En directo · %1$d'»), <code>estadio</code> («Estadio: %1$s») y <code>marcador</code> («%1$d - %2$d», con dos parámetros). Se rellenan con <code>getString(id, args…)</code>.</li>
+  <li><b>Plurals:</b> <code>partidos_hoy</code> distingue «1 partido» de «3 partidos». Lo añadí porque Lint lo sugería y porque en inglés también cambia («match/matches»).</li>
+  <li>Los nombres propios (equipos, estadio, nombre de la app) llevan <code>translatable="false"</code>: no se traducen y Lint no avisa de que falten en <code>values-en</code>.</li>
+  <li>También las descripciones de accesibilidad (<code>contentDescription</code>) están en <code>strings.xml</code>.</li>
+</ul>
+
+<h2 id="s5-2">5.2. Internacionalización</h2>
+<p><code>values-en/strings.xml</code> traduce al inglés todos los textos traducibles y los dos arrays. El español es el idioma por defecto (carpeta <code>values</code> sin calificador), así que si el dispositivo está en cualquier otro idioma se mostrará en español. Al cambiar el idioma del emulador a <i>English</i>, Android carga <code>values-en</code> sin tocar el código:</p>
+<div class="fila">
+  <figure class="cap" data-src="../capturas/03_movil_es.png" data-txt="App en español"></figure>
+  <figure class="cap" data-src="../capturas/05_movil_en.png" data-txt="App en inglés"></figure>
+</div>
+<p class="caption" data-ilus="La app en español y en inglés">Ilustración 8. La app en español (izquierda) y en inglés (derecha)</p>
+
+<h2 id="s5-3">5.3. Imágenes: vectorial y mapa de bits</h2>
+<div class="fila">
+  <figure style="flex:0 0 120px"><img src="../../app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" style="width:96px;background:#fff"></figure>
+  <figure><img src="../../app/src/main/res/drawable-nodpi/img_estadio.jpg" style="max-height:150px;border-radius:8px"></figure>
+</div>
+<p class="caption" data-ilus="Recursos gráficos: balón vectorial y estadio en mapa de bits">Ilustración 9. Recursos gráficos: balón vectorial (en el icono) y estadio en mapa de bits</p>
+<ul>
+  <li><b><code>drawable/ic_balon.xml</code> (vectorial, Vector Asset):</b> es el icono Material <i>sports_soccer</i>, importado con <i>New → Vector Asset</i>. Ocupa <b>1 KB</b> y se ve nítido en cualquier densidad porque se dibuja a partir de trazados. Además se puede teñir con <code>app:tint</code>: en la cabecera aparece en amarillo (<code>@color/color_secundario</code>) sin necesidad de otra imagen.</li>
+  <li><b><code>drawable-nodpi/img_estadio.jpg</code> (mapa de bits):</b> es la ilustración del estadio usada como banner (1200 × 500 px, <b>112 KB</b>). Tiene degradados, iluminación y cientos de puntos de público. Como vector sería un fichero enorme y lento de dibujar, así que es mejor un bitmap comprimido. La pongo en <code>drawable-nodpi</code> para que Android no la reescale por densidad, porque ya se ajusta con <code>scaleType="centerCrop"</code>.</li>
+</ul>
+<div class="nota"><b>¿Cuándo usar cada formato?</b> Para iconos, logotipos y formas planas conviene el <b>vectorial</b>: un solo XML de 1 KB sustituye a 5 PNG (mdpi a xxxhdpi), que en este proyecto ocupan unos 23 KB, y escala sin perder calidad. Para fotografías o ilustraciones con mucho detalle conviene un <b>mapa de bits</b> comprimido (JPG o WebP), porque un vector equivalente pesaría más y consumiría CPU al dibujarse. Elegir bien el formato reduce directamente el tamaño del APK, algo importante en móvil por la memoria y los datos limitados.</div>
+
+<h2 id="s5-4">5.4. Colores</h2>
+<table>
+  <tr><th style="width:34%">Nombre (función)</th><th style="width:15%">Valor</th><th>Uso y justificación</th></tr>
+  <tr><td><span class="sw" style="background:#1B5E20"></span><code>color_primario</code></td><td>#1B5E20</td><td>Verde césped: el color que cualquiera asocia al fútbol. Se usa en la cabecera, el marcador y el icono.</td></tr>
+  <tr><td><span class="sw" style="background:#0D3B12"></span><code>color_primario_oscuro</code></td><td>#0D3B12</td><td>Barra de estado y navegación; las costuras del balón del icono.</td></tr>
+  <tr><td><span class="sw" style="background:#FFC107"></span><code>color_secundario</code></td><td>#FFC107</td><td>Amarillo marcador electrónico / tarjeta: botones principales, lema y logo. Contrasta mucho con el verde.</td></tr>
+  <tr><td><span class="sw" style="background:#D32F2F"></span><code>color_en_directo</code></td><td>#D32F2F</td><td>Rojo «EN DIRECTO»: solo para lo que está pasando ahora, para que llame la atención.</td></tr>
+  <tr><td><span class="sw" style="background:#F3F6F1"></span><code>color_fondo</code></td><td>#F3F6F1</td><td>Fondo blanco roto con un toque verde, más suave que el blanco puro.</td></tr>
+  <tr><td><span class="sw" style="background:#FFFFFF"></span><code>color_superficie</code></td><td>#FFFFFF</td><td>Fondo de las tarjetas de partido, para que destaquen sobre el fondo.</td></tr>
+  <tr><td><span class="sw" style="background:#1A1A1A"></span><code>color_texto_principal</code> / <span class="sw" style="background:#5F6B5C"></span><code>color_texto_secundario</code></td><td>#1A1A1A / #5F6B5C</td><td>Texto principal casi negro y texto secundario gris verdoso. Ambos superan un contraste de 4,5:1 sobre blanco.</td></tr>
+  <tr><td><span class="sw" style="background:#1B5E20"></span><code>color_marcador</code> · <span class="sw" style="background:#DCE3D8"></span><code>color_divisor</code></td><td>#1B5E20 · #DCE3D8</td><td>Color propio del marcador (en modo oscuro cambia a un verde claro) y líneas separadoras.</td></tr>
+</table>
+<p class="caption" data-tabla="Paleta de colores de colors.xml">Tabla 9. Paleta de colores de <code>colors.xml</code></p>
+<p>Los nombres describen la <b>función</b> del color, no el color en sí. Así, en <code>values-night/colors.xml</code> redefino los mismos nombres con otros valores y todo el tema oscuro funciona sin tocar ningún layout.</p>
+
+<h2 id="s5-5">5.5. Estilos, tema y unidades</h2>
+<p><b>Tema:</b> <code>Theme.NowFootball</code> (en <code>themes.xml</code>) hereda de <code>Theme.Material3.Light.NoActionBar</code> y sustituye los colores de Material por los míos (<code>colorPrimary</code>, <code>colorSecondary</code>, <code>colorSurface</code>, <code>android:windowBackground</code>, <code>android:statusBarColor</code>…). Se aplica en el Manifest a toda la app.</p>
+<p><b>Estilos propios</b> (<code>styles.xml</code>), reutilizados en varias vistas:</p>
+<table>
+  <tr><th style="width:32%">Estilo</th><th>Qué define</th><th style="width:14%">Usos</th></tr>
+  <tr><td><code>Estilo.Titulo</code> (y <code>.Cabecera</code>)</td><td>24 sp, negrita, color de texto principal (blanco en la cabecera)</td><td>4</td></tr>
+  <tr><td><code>Estilo.Subtitulo</code></td><td>16 sp, color secundario</td><td>4</td></tr>
+  <tr><td><code>Estilo.Equipo</code></td><td>Nombre de equipo centrado, en negrita, con un máximo de 2 líneas</td><td>8</td></tr>
+  <tr><td><code>Estilo.Marcador</code> (y <code>.Grande</code>)</td><td>Monoespaciada, 28 sp / 56 sp, <code>color_marcador</code></td><td>4</td></tr>
+  <tr><td><code>Estilo.Etiqueta</code> (y <code>.EnDirecto</code>)</td><td>12 sp, mayúsculas; en rojo si el partido está en directo</td><td>6</td></tr>
+  <tr><td><code>Estilo.TarjetaPartido</code></td><td>MaterialCardView: radio 16 dp, elevación 3 dp y padding</td><td>4</td></tr>
+  <tr><td><code>Estilo.Boton</code> (y <code>.Secundario</code>)</td><td>Alto mínimo 52 dp, esquinas de 26 dp, amarillo o contorno verde</td><td>3</td></tr>
+</table>
+<p class="caption" data-tabla="Estilos propios y número de usos">Tabla 10. Estilos propios y número de usos</p>
+<p>He usado los dos tipos de <b>herencia</b>: explícita (<code>parent="Widget.Material3.Button"</code>) e implícita por nombre (<code>Estilo.Titulo.Cabecera</code> hereda de <code>Estilo.Titulo</code>). <b>Todas las medidas están en <code>dimens.xml</code></b>: márgenes y tamaños en <code>dp</code> (independientes de la densidad) y textos en <code>sp</code>, que además respetan el tamaño de letra que el usuario elige en Ajustes, algo importante para la accesibilidad.</p>
+
+<h2 id="s5-6">5.6. Icono adaptativo</h2>
+<p>El icono es un <b>icono adaptativo</b> creado con <i>New → Image Asset</i> (<i>Launcher Icons, Adaptive and Legacy</i>): un balón como primer plano sobre un fondo verde césped. Genera estos ficheros:</p>
+<ul>
+  <li><code>mipmap-anydpi-v26/ic_launcher.xml</code> e <code>ic_launcher_round.xml</code>: el <code>&lt;adaptive-icon&gt;</code> con <code>&lt;background&gt;</code> (<code>@color/ic_launcher_background</code>), <code>&lt;foreground&gt;</code> (<code>@drawable/ic_launcher_foreground</code>, vector de 108 dp con el balón dentro de la zona segura de 66 dp) y <code>&lt;monochrome&gt;</code> para los iconos temáticos de Android 13.</li>
+  <li><code>mipmap-mdpi</code> … <code>mipmap-xxxhdpi</code>: PNG de 48 a 192 px para Android 7.0-7.1 (API 24-25), que no admiten iconos adaptativos.</li>
+  <li>En el Manifest: <code>android:icon="@mipmap/ic_launcher"</code> y <code>android:roundIcon="@mipmap/ic_launcher_round"</code>.</li>
+</ul>
+<div class="fila">
+  <figure class="cap" data-src="../capturas/08_image_asset.png" data-txt="Asistente Image Asset"></figure>
+  <figure class="cap" data-src="../capturas/07_lanzador_icono.png" data-txt="Icono en el lanzador del emulador"></figure>
+</div>
+<p class="caption" data-ilus="Creación del icono con Image Asset y resultado en el lanzador">Ilustración 10. Creación del icono con Image Asset y resultado en el lanzador</p>
+
+<h2 id="s5-7">5.7. Ampliación: tema oscuro y diseño horizontal</h2>
+<ul>
+  <li><b><code>values-night/</code></b>: <code>colors.xml</code> redefine la paleta (fondo #0F1410, superficie #1C231D, texto claro y marcador en verde claro #81C784 para mantener el contraste) y <code>themes.xml</code> cambia el tema base a <code>Theme.Material3.Dark.NoActionBar</code>. Se activa solo cuando el sistema está en modo oscuro.</li>
+  <li><b><code>layout-land/activity_main.xml</code></b>: en horizontal, la pantalla principal se divide en dos columnas, con el banner, el saludo y la competición a la izquierda y la lista de partidos a la derecha. Reutiliza los mismos <code>&lt;include&gt;</code> y los mismos <code>id</code>, así que <code>MainActivity.java</code> no cambia.</li>
+</ul>
+<div class="fila">
+  <figure class="cap" data-src="../capturas/09_modo_oscuro.png" data-txt="Modo oscuro"></figure>
+  <figure class="cap" data-src="../capturas/10_horizontal.png" data-txt="Diseño horizontal (layout-land)"></figure>
+</div>
+<p class="caption" data-ilus="Ampliación: modo oscuro y diseño horizontal">Ilustración 11. Ampliación: modo oscuro (izquierda) y diseño horizontal (derecha)</p>
+
+<!-- ============================ 6. CONCLUSIÓN ============================ -->
+<h1 id="s6">6. Conclusión personal</h1>
+<p>Lo que más he aprendido en esta práctica es que en Android <b>la organización de los recursos es casi tan importante como el código</b>. Al principio me parecía exagerado sacar cada texto, color y medida a <code>res/values</code>. Pero cuando hice la traducción al inglés y el tema oscuro, vi que no tuve que tocar ni una línea de Java ni de los layouts: bastó con añadir <code>values-en</code> y <code>values-night</code>. Lo mismo pasó con el diseño horizontal, que reutiliza los mismos <code>include</code> e <code>id</code>.</p>
+<p>También he entendido mejor el ciclo de vida. Antes no sabía que girar el móvil destruye y recrea la Activity, ni que desde Android 12 el botón Atrás en la pantalla principal ya no la destruye. Y al poner nombres de función a los colores (<code>color_primario</code> en lugar de <code>verde</code>) vi por qué es buena idea: el «verde» del marcador tenía que dejar de ser verde oscuro en modo oscuro.</p>
+<p><b>Dificultades:</b> configurar los emuladores me llevó tiempo, porque cada imagen del sistema ocupa bastante y el primer arranque es lento. También me costó entender la diferencia entre <code>dp</code> y <code>sp</code> y por qué <code>0dp</code> no cuenta como medida escrita a mano. Lint me ayudó mucho: me avisó de que «%1$d partidos» debería ser un <code>plurals</code> y de que tenía <code>layout_weight</code> anidados, que afectan al rendimiento. Por último, trabajar con Git haciendo commits pequeños y con mensajes claros me obligó a planificar el orden de los pasos, y el historial ahora cuenta cómo se ha construido el proyecto.</p>
+
+<h1 id="s7" class="">7. Bibliografía y recursos</h1>
+<ul>
+  <li>Android Developers. <i>Ciclo de vida de una actividad</i>. developer.android.com/guide/components/activities/activity-lifecycle</li>
+  <li>Android Developers. <i>Descripción general de los recursos de la app</i>. developer.android.com/guide/topics/resources/providing-resources</li>
+  <li>Android Developers. <i>Recursos de cadenas (string, string-array, plurals)</i>. developer.android.com/guide/topics/resources/string-resource</li>
+  <li>Android Developers. <i>Iconos adaptables</i>. developer.android.com/develop/ui/views/launch/icon_design_adaptive</li>
+  <li>Android Developers. <i>Estilos y temas</i>. developer.android.com/develop/ui/views/theming/themes</li>
+  <li>Material Design 3. <i>Color system</i> y <i>Material Symbols</i> (icono <i>sports_soccer</i>). m3.material.io</li>
+  <li>Apuntes del módulo PMDM, temas 1, 2 y 3. MEDAC.</li>
+</ul>
+
+<script src="paginas.js"></script>
+<script>
+/* Capturas: si la imagen existe se muestra; si no, aparece un recuadro "pendiente" */
+document.querySelectorAll('figure.cap').forEach(function (f) {
+  var img = new Image();
+  img.className = 'shot';
+  img.onerror = function () {
+    f.innerHTML = '<div class="pendiente">CAPTURA PENDIENTE<br><b>' + f.dataset.txt + '</b><br>docs/' + f.dataset.src.replace('../', '') + '</div>';
+  };
+  img.src = f.dataset.src;
+  f.appendChild(img);
+});
+/* Índices generados a partir de los títulos y pies; los números de página los rellena el script de compilación */
+var PAG = window.PAGINAS || {};
+function fila(ul, cls, id, texto) {
+  var li = document.createElement('li');
+  li.className = cls;
+  li.innerHTML = '<a href="#' + id + '">' + texto + '</a><span class="relleno"></span><span>' + (PAG[id] || '') + '</span>';
+  ul.appendChild(li);
+}
+document.querySelectorAll('h1[id^="s"], h2[id^="s"]').forEach(function (h) {
+  fila(document.getElementById('indice-general'), h.tagName === 'H1' ? 'n1' : 'n2', h.id, h.textContent);
+});
+var ni = 0, nt = 0;
+document.querySelectorAll('[data-ilus]').forEach(function (p) {
+  ni++; p.id = 'ilus' + ni; fila(document.getElementById('indice-ilustraciones'), 'n2', p.id, 'Ilustración ' + ni + '. ' + p.dataset.ilus);
+});
+document.querySelectorAll('[data-tabla]').forEach(function (p) {
+  nt++; p.id = 'tabla' + nt; fila(document.getElementById('indice-tablas'), 'n2', p.id, 'Tabla ' + nt + '. ' + p.dataset.tabla);
+});
+</script>
+</body>
+</html>

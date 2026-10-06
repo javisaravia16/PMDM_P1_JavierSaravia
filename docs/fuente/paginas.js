@@ -1,0 +1,2 @@
+// Generado por el script de compilación de la memoria
+window.PAGINAS = {"s1":4,"s2":5,"s2-1":5,"s2-2":5,"s2-3":6,"s3":7,"s3-1":7,"s3-2":7,"s3-3":7,"s3-4":8,"s3-5":8,"s4":10,"s4-1":10,"s4-2":10,"s4-3":11,"s4-4":11,"s4-5":12,"s5":13,"s5-1":13,"s5-2":13,"s5-3":14,"s5-4":15,"s5-5":15,"s5-6":16,"s5-7":16,"s6":18,"s7":19,"tabla1":5,"tabla2":5,"ilus1":6,"tabla3":7,"tabla4":8,"ilus2":8,"tabla5":9,"tabla6":9,"tabla7":10,"ilus3":10,"tabla8":10,"ilus4":10,"ilus5":11,"ilus6":11,"ilus7":13,"ilus8":13,"ilus9":14,"tabla9":15,"tabla10":16,"ilus10":16,"ilus11":17};
