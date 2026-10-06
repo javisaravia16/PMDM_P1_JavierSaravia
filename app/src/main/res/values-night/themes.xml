@@ -1,0 +1,17 @@
+<resources>
+    <!-- Ampliación: tema oscuro. Usa la misma paleta (values-night/colors.xml) sobre Material3 Dark -->
+    <style name="Base.Theme.NowFootball" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/color_marcador</item>
+        <item name="colorOnPrimary">@color/color_primario_oscuro</item>
+        <item name="colorPrimaryContainer">@color/color_primario</item>
+        <item name="colorSecondary">@color/color_secundario</item>
+        <item name="colorOnSecondary">@color/color_sobre_secundario</item>
+        <item name="colorError">@color/color_en_directo</item>
+        <item name="android:colorBackground">@color/color_fondo</item>
+        <item name="colorSurface">@color/color_superficie</item>
+        <item name="colorOnSurface">@color/color_texto_principal</item>
+        <item name="android:windowBackground">@color/color_fondo</item>
+        <item name="android:statusBarColor">@color/color_primario_oscuro</item>
+        <item name="android:navigationBarColor">@color/color_primario_oscuro</item>
+    </style>
+</resources>

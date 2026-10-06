@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ampliación: paleta para el tema oscuro (mismos nombres, distintos valores) -->
+    <color name="color_primario">#FF1B5E20</color>
+    <color name="color_primario_oscuro">#FF0A2A0D</color>
+    <color name="color_secundario">#FFFFCA28</color>
+    <color name="color_en_directo">#FFEF5350</color>
+    <color name="color_fondo">#FF0F1410</color>
+    <color name="color_superficie">#FF1C231D</color>
+    <color name="color_texto_principal">#FFE8EDE6</color>
+    <color name="color_texto_secundario">#FFA9B5A6</color>
+    <color name="color_divisor">#FF2C352D</color>
+    <color name="color_marcador">#FF81C784</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ampliación: versión horizontal de la pantalla principal en dos columnas -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/cabecera" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <!-- Columna izquierda: banner, saludo y competición -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margen_pantalla">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto_banner_land"
+                    android:layout_marginBottom="@dimen/espacio_grande"
+                    android:contentDescription="@string/desc_banner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_estadio" />
+
+                <include layout="@layout/bloque_bienvenida" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Columna derecha: lista de partidos -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margen_pantalla">
+
+                <include layout="@layout/lista_partidos" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

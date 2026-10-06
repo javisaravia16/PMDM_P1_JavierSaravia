@@ -30,7 +30,7 @@
         <item name="android:textSize">@dimen/texto_marcador</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">monospace</item>
-        <item name="android:textColor">@color/color_primario</item>
+        <item name="android:textColor">@color/color_marcador</item>
         <item name="android:gravity">center</item>
     </style>
 

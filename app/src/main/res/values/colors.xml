@@ -12,6 +12,7 @@
     <color name="color_texto_principal">#FF1A1A1A</color>
     <color name="color_texto_secundario">#FF5F6B5C</color>
     <color name="color_divisor">#FFDCE3D8</color>
+    <color name="color_marcador">#FF1B5E20</color>
 
     <!-- Fondo del icono adaptativo -->
     <color name="ic_launcher_background">#FF1B5E20</color>
