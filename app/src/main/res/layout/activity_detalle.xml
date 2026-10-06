@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla 2: detalle de un partido (solo interfaz) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/cabecera" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_banner"
+        android:contentDescription="@string/desc_banner"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_estadio" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla">
+
+        <TextView
+            style="@style/Estilo.Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/espacio_medio"
+            android:text="@string/titulo_detalle" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Estilo.TarjetaPartido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEstadoDetalle"
+                    style="@style/Estilo.Etiqueta.EnDirecto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Estilo.Equipo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/equipo_betis" />
+
+                    <TextView
+                        android:id="@+id/tvMarcadorDetalle"
+                        style="@style/Estilo.Marcador.Grande"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/marcador_vacio" />
+
+                    <TextView
+                        style="@style/Estilo.Equipo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/equipo_sevilla" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvEstadio"
+                    style="@style/Estilo.Subtitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Estilo.Subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_eventos"
+            android:textStyle="bold" />
+
+        <!-- Lista alimentada directamente por un string-array -->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:layout_weight="1"
+            android:divider="@color/color_divisor"
+            android:dividerHeight="@dimen/alto_divisor"
+            android:entries="@array/eventos_partido" />
+
+        <Button
+            style="@style/Estilo.Boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:text="@string/boton_seguir" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            style="@style/Estilo.Boton.Secundario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_volver" />
+    </LinearLayout>
+</LinearLayout>

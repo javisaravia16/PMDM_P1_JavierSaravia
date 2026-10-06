@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lista de partidos del día: tarjetas de ejemplo, botón y última actualización -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Estilo.Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/espacio_medio"
+        android:text="@string/titulo_partidos" />
+
+    <!-- Partido 1: en directo -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPartido1"
+        style="@style/Estilo.TarjetaPartido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvEstado1"
+                style="@style/Estilo.Etiqueta.EnDirecto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_betis" />
+
+                <TextView
+                    android:id="@+id/tvMarcador1"
+                    style="@style/Estilo.Marcador"
+                    android:layout_width="@dimen/ancho_marcador"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marcador_vacio" />
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_sevilla" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Partido 2: finalizado -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Estilo.TarjetaPartido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Estilo.Etiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/estado_final" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_madrid" />
+
+                <TextView
+                    android:id="@+id/tvMarcador2"
+                    style="@style/Estilo.Marcador"
+                    android:layout_width="@dimen/ancho_marcador"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marcador_vacio" />
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_barcelona" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Partido 3: próximo -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Estilo.TarjetaPartido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvEstado3"
+                style="@style/Estilo.Etiqueta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_atletico" />
+
+                <TextView
+                    style="@style/Estilo.Marcador"
+                    android:layout_width="@dimen/ancho_marcador"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marcador_vacio" />
+
+                <TextView
+                    style="@style/Estilo.Equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/equipo_valencia" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnVerDetalle"
+        style="@style/Estilo.Boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boton_ver_detalle" />
+
+    <TextView
+        android:id="@+id/tvActualizado"
+        style="@style/Estilo.Subtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espacio_medio"
+        android:gravity="center"
+        android:textSize="@dimen/texto_pequeno" />
+</LinearLayout>
