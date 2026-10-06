@@ -1,3 +1,65 @@
 <resources>
-    <string name="app_name">NowFootball</string>
+    <!-- General -->
+    <string name="app_name" translatable="false">NowFootball</string>
+    <string name="lema">Resultados al minuto</string>
+    <string name="saludo">¡Hola, %1$s!</string>
+    <string name="usuario_invitado">aficionado</string>
+
+    <!-- Pantalla principal -->
+    <string name="titulo_partidos">Partidos de hoy</string>
+    <string name="partidos_hoy">%1$d partidos en juego hoy</string>
+    <string name="etiqueta_competicion">Competición</string>
+    <string name="ultima_actualizacion">Actualizado hace %1$d min</string>
+
+    <!-- Estados del partido -->
+    <string name="estado_en_directo">En directo · %1$d\'</string>
+    <string name="estado_final">Final</string>
+    <string name="estado_descanso">Descanso</string>
+    <string name="estado_proximo">Hoy · %1$s</string>
+    <string name="hora_partido" translatable="false">21:00</string>
+
+    <!-- Marcador: dos parámetros numéricos -->
+    <string name="marcador" translatable="false">%1$d - %2$d</string>
+    <string name="marcador_vacio" translatable="false">- : -</string>
+
+    <!-- Equipos (nombres propios, no se traducen) -->
+    <string name="equipo_betis" translatable="false">Real Betis</string>
+    <string name="equipo_sevilla" translatable="false">Sevilla FC</string>
+    <string name="equipo_madrid" translatable="false">Real Madrid</string>
+    <string name="equipo_barcelona" translatable="false">FC Barcelona</string>
+    <string name="equipo_atletico" translatable="false">Atlético de Madrid</string>
+    <string name="equipo_valencia" translatable="false">Valencia CF</string>
+    <string name="estadio_villamarin" translatable="false">Benito Villamarín</string>
+
+    <!-- Botones -->
+    <string name="boton_ver_detalle">Ver detalle</string>
+    <string name="boton_volver">Volver a partidos</string>
+    <string name="boton_seguir">Seguir partido</string>
+
+    <!-- Pantalla de detalle -->
+    <string name="titulo_detalle">Detalle del partido</string>
+    <string name="estadio">Estadio: %1$s</string>
+    <string name="titulo_eventos">Momentos clave</string>
+
+    <!-- Accesibilidad (contentDescription) -->
+    <string name="desc_logo">Logotipo de NowFootball</string>
+    <string name="desc_banner">Ilustración de un estadio de fútbol</string>
+
+    <!-- Arrays -->
+    <string-array name="competiciones">
+        <item>Primera División</item>
+        <item>Liga de Campeones</item>
+        <item>Liga inglesa</item>
+        <item>Liga italiana</item>
+        <item>Liga alemana</item>
+        <item>Copa del Rey</item>
+    </string-array>
+
+    <string-array name="eventos_partido">
+        <item>12\' · Gol del Real Betis</item>
+        <item>34\' · Tarjeta amarilla al Sevilla FC</item>
+        <item>45\' · Descanso</item>
+        <item>58\' · Gol del Sevilla FC</item>
+        <item>77\' · Gol del Real Betis</item>
+    </string-array>
 </resources>
