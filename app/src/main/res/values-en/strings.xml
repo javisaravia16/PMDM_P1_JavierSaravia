@@ -1,0 +1,51 @@
+<resources>
+    <!-- English translation (values-en). Strings marked translatable="false" are not repeated. -->
+    <!-- General -->
+    <string name="lema">Live scores, minute by minute</string>
+    <string name="saludo">Hi, %1$s!</string>
+    <string name="usuario_invitado">football fan</string>
+
+    <!-- Main screen -->
+    <string name="titulo_partidos">Today\'s matches</string>
+    <string name="partidos_hoy">%1$d matches being played today</string>
+    <string name="etiqueta_competicion">Competition</string>
+    <string name="ultima_actualizacion">Updated %1$d min ago</string>
+
+    <!-- Match status -->
+    <string name="estado_en_directo">Live · %1$d\'</string>
+    <string name="estado_final">Full time</string>
+    <string name="estado_descanso">Half time</string>
+    <string name="estado_proximo">Today · %1$s</string>
+
+    <!-- Buttons -->
+    <string name="boton_ver_detalle">View details</string>
+    <string name="boton_volver">Back to matches</string>
+    <string name="boton_seguir">Follow match</string>
+
+    <!-- Detail screen -->
+    <string name="titulo_detalle">Match details</string>
+    <string name="estadio">Stadium: %1$s</string>
+    <string name="titulo_eventos">Key moments</string>
+
+    <!-- Accessibility -->
+    <string name="desc_logo">NowFootball logo</string>
+    <string name="desc_banner">Illustration of a football stadium</string>
+
+    <!-- Arrays -->
+    <string-array name="competiciones">
+        <item>Spanish League</item>
+        <item>Champions League</item>
+        <item>Premier League</item>
+        <item>Serie A</item>
+        <item>Bundesliga</item>
+        <item>Copa del Rey</item>
+    </string-array>
+
+    <string-array name="eventos_partido">
+        <item>12\' · Goal for Real Betis</item>
+        <item>34\' · Yellow card for Sevilla FC</item>
+        <item>45\' · Half time</item>
+        <item>58\' · Goal for Sevilla FC</item>
+        <item>77\' · Goal for Real Betis</item>
+    </string-array>
+</resources>
