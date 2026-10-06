@@ -7,14 +7,16 @@
 
     <!-- Main screen -->
     <string name="titulo_partidos">Today\'s matches</string>
-    <string name="partidos_hoy">%1$d matches being played today</string>
+    <plurals name="partidos_hoy">
+        <item quantity="one">%1$d match being played today</item>
+        <item quantity="other">%1$d matches being played today</item>
+    </plurals>
     <string name="etiqueta_competicion">Competition</string>
     <string name="ultima_actualizacion">Updated %1$d min ago</string>
 
     <!-- Match status -->
     <string name="estado_en_directo">Live · %1$d\'</string>
     <string name="estado_final">Full time</string>
-    <string name="estado_descanso">Half time</string>
     <string name="estado_proximo">Today · %1$s</string>
 
     <!-- Buttons -->

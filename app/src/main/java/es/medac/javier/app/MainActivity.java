@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         tvSaludo.setText(getString(R.string.saludo, getString(R.string.usuario_invitado)));
 
         TextView tvPartidosHoy = findViewById(R.id.tvPartidosHoy);
-        tvPartidosHoy.setText(getString(R.string.partidos_hoy, 3));
+        tvPartidosHoy.setText(getResources().getQuantityString(R.plurals.partidos_hoy, 3, 3));
 
         TextView tvEstado1 = findViewById(R.id.tvEstado1);
         tvEstado1.setText(getString(R.string.estado_en_directo, 78));

@@ -7,14 +7,16 @@
 
     <!-- Pantalla principal -->
     <string name="titulo_partidos">Partidos de hoy</string>
-    <string name="partidos_hoy">%1$d partidos en juego hoy</string>
+    <plurals name="partidos_hoy">
+        <item quantity="one">%1$d partido en juego hoy</item>
+        <item quantity="other">%1$d partidos en juego hoy</item>
+    </plurals>
     <string name="etiqueta_competicion">Competición</string>
     <string name="ultima_actualizacion">Actualizado hace %1$d min</string>
 
     <!-- Estados del partido -->
     <string name="estado_en_directo">En directo · %1$d\'</string>
     <string name="estado_final">Final</string>
-    <string name="estado_descanso">Descanso</string>
     <string name="estado_proximo">Hoy · %1$s</string>
     <string name="hora_partido" translatable="false">21:00</string>
 

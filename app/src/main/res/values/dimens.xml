@@ -5,7 +5,6 @@
     <dimen name="espacio_pequeno">4dp</dimen>
     <dimen name="espacio_medio">8dp</dimen>
     <dimen name="espacio_grande">16dp</dimen>
-    <dimen name="espacio_extra">24dp</dimen>
 
     <!-- Componentes (dp) -->
     <dimen name="alto_cabecera">72dp</dimen>
