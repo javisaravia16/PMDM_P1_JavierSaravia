@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilos propios reutilizados en las pantallas -->
+
+    <style name="Estilo.Titulo" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/texto_titulo</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_texto_principal</item>
+    </style>
+
+    <!-- Hereda de Estilo.Titulo por nombre (herencia implícita) -->
+    <style name="Estilo.Titulo.Cabecera">
+        <item name="android:textColor">@color/color_sobre_primario</item>
+    </style>
+
+    <style name="Estilo.Subtitulo" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/texto_subtitulo</item>
+        <item name="android:textColor">@color/color_texto_secundario</item>
+    </style>
+
+    <style name="Estilo.Equipo" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/texto_cuerpo</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_texto_principal</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Estilo.Marcador" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/texto_marcador</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/color_primario</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Estilo.Marcador.Grande">
+        <item name="android:textSize">@dimen/texto_marcador_grande</item>
+    </style>
+
+    <style name="Estilo.Etiqueta" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/texto_pequeno</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_texto_secundario</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Estilo.Etiqueta.EnDirecto">
+        <item name="android:textColor">@color/color_en_directo</item>
+    </style>
+
+    <style name="Estilo.TarjetaPartido" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/color_superficie</item>
+        <item name="cardCornerRadius">@dimen/radio_tarjeta</item>
+        <item name="cardElevation">@dimen/elevacion_tarjeta</item>
+        <item name="android:layout_marginBottom">@dimen/espacio_grande</item>
+        <item name="contentPadding">@dimen/espacio_grande</item>
+    </style>
+
+    <style name="Estilo.Boton" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/alto_boton</item>
+        <item name="android:textSize">@dimen/texto_boton</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/color_secundario</item>
+        <item name="android:textColor">@color/color_sobre_secundario</item>
+        <item name="cornerRadius">@dimen/radio_boton</item>
+    </style>
+
+    <style name="Estilo.Boton.Secundario" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/alto_boton</item>
+        <item name="android:textSize">@dimen/texto_boton</item>
+        <item name="android:textColor">@color/color_primario</item>
+        <item name="strokeColor">@color/color_primario</item>
+        <item name="cornerRadius">@dimen/radio_boton</item>
+    </style>
+</resources>

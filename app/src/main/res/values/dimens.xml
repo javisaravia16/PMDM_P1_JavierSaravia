@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaciados (dp) -->
+    <dimen name="margen_pantalla">16dp</dimen>
+    <dimen name="espacio_pequeno">4dp</dimen>
+    <dimen name="espacio_medio">8dp</dimen>
+    <dimen name="espacio_grande">16dp</dimen>
+    <dimen name="espacio_extra">24dp</dimen>
+
+    <!-- Componentes (dp) -->
+    <dimen name="alto_cabecera">72dp</dimen>
+    <dimen name="tam_logo">48dp</dimen>
+    <dimen name="alto_banner">160dp</dimen>
+    <dimen name="alto_banner_land">220dp</dimen>
+    <dimen name="alto_boton">52dp</dimen>
+    <dimen name="radio_tarjeta">16dp</dimen>
+    <dimen name="radio_boton">26dp</dimen>
+    <dimen name="elevacion_tarjeta">3dp</dimen>
+    <dimen name="ancho_marcador">88dp</dimen>
+    <dimen name="alto_divisor">1dp</dimen>
+
+    <!-- Textos (sp) -->
+    <dimen name="texto_titulo">24sp</dimen>
+    <dimen name="texto_subtitulo">16sp</dimen>
+    <dimen name="texto_cuerpo">16sp</dimen>
+    <dimen name="texto_pequeno">12sp</dimen>
+    <dimen name="texto_marcador">28sp</dimen>
+    <dimen name="texto_marcador_grande">56sp</dimen>
+    <dimen name="texto_boton">16sp</dimen>
+</resources>

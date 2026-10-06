@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta NowFootball: verde césped, amarillo marcador y rojo "en directo" -->
+    <color name="color_primario">#FF1B5E20</color>
+    <color name="color_primario_oscuro">#FF0D3B12</color>
+    <color name="color_sobre_primario">#FFFFFFFF</color>
+    <color name="color_secundario">#FFFFC107</color>
+    <color name="color_sobre_secundario">#FF1A1A1A</color>
+    <color name="color_en_directo">#FFD32F2F</color>
+    <color name="color_fondo">#FFF3F6F1</color>
+    <color name="color_superficie">#FFFFFFFF</color>
+    <color name="color_texto_principal">#FF1A1A1A</color>
+    <color name="color_texto_secundario">#FF5F6B5C</color>
+    <color name="color_divisor">#FFDCE3D8</color>
+
+    <!-- Fondo del icono adaptativo -->
+    <color name="ic_launcher_background">#FF1B5E20</color>
+</resources>
