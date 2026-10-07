@@ -1,10 +1,10 @@
 # ⚽ NowFootball
 
-**Resultados de fútbol al minuto.** Práctica 1 de *Programación Multimedia y Dispositivos Móviles* (MEDAC) · Javier Saravia.
+**Resultados de fútbol al minuto.** Práctica 1 de *Programación Multimedia y Dispositivos Móviles* (MEDAC) · Javier Saravia Ogazon.
 
 NowFootball es una app Android para consultar de un vistazo los partidos del día: cuáles están en directo y en qué minuto van, cuáles han terminado y a qué hora empiezan los siguientes. Desde cada partido se abre un detalle con el marcador, el estadio y los momentos clave.
 
-> En esta práctica solo se diseña la **interfaz**. Los datos son de ejemplo. Lo que se trabaja es el análisis, el entorno y la **gestión de recursos**: textos, imágenes, colores, estilos, tema e icono.
+> En esta práctica solo se diseña la interfaz, los datos que hay son de ejemplo.
 
 ## Capturas
 
@@ -38,8 +38,8 @@ NowFootball es una app Android para consultar de un vistazo los partidos del dí
    ```bash
    git clone https://github.com/javisaravia16/PMDM_P1_JavierSaravia.git
    ```
-2. Ábrelo en Android Studio con **File › Open** y espera a que termine la sincronización de Gradle.
-3. Elige un dispositivo virtual en **Device Manager** (por ejemplo, Pixel 7 · API 36) y pulsa **Run ▶**.
+2. Ábrelo en Android Studio con File › Open y espera a que termine la sincronización de Gradle.
+3. Elige un dispositivo virtual en Device Manager (por ejemplo, Pixel 7 · API 36) y pulsa **Run ▶**.
 
 También se puede compilar desde la terminal:
 
