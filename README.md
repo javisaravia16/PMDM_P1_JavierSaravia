@@ -11,13 +11,13 @@ NowFootball es una app Android para consultar de un vistazo los partidos del dí
 | Partidos de hoy | Detalle del partido | Versión en inglés |
 |:---:|:---:|:---:|
 | <img width="391" height="874" alt="image" src="https://github.com/user-attachments/assets/0be4b82f-bede-4d54-8ae2-5fb9ab56dd75" />
-) | <img width="399" height="886" alt="image" src="https://github.com/user-attachments/assets/b808836d-8d20-44ae-b229-d3d8975a8781" />
-) | <img width="281" height="602" alt="image" src="https://github.com/user-attachments/assets/ee7980ab-c189-4c47-8409-61ac3eba51eb" />
-) |
+| <img width="399" height="886" alt="image" src="https://github.com/user-attachments/assets/b808836d-8d20-44ae-b229-d3d8975a8781" />
+| <img width="281" height="602" alt="image" src="https://github.com/user-attachments/assets/ee7980ab-c189-4c47-8409-61ac3eba51eb" />
+|
 
 | Tablet | Modo oscuro | Horizontal | Icono en el lanzador |
 |:---:|:---:|:---:|:---:|
-| ![Tablet](<img width="1022" height="670" alt="image" src="https://github.com/user-attachments/assets/cd5e38f9-cdf5-4fbb-8586-db7315e6fc2d" />
+| <img width="1022" height="670" alt="image" src="https://github.com/user-attachments/assets/cd5e38f9-cdf5-4fbb-8586-db7315e6fc2d" />
 ) | ![Oscuro](docs/capturas/09_modo_oscuro.png) | ![Horizontal](docs/capturas/10_horizontal.png) | ![Icono](<img width="48" height="48" alt="image" src="https://github.com/user-attachments/assets/a8087479-78f7-4163-a36f-756be1ec1c30" />
 ) |
 
